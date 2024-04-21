@@ -64,7 +64,6 @@ async def logomake(_, message: Message):
     await m.delete()
 
 @bot.on_message(filters.command("mlogo") & ~filters.forwarded)
-@ForceSub
 async def logomake(_, message: Message):
     if len(message.command) != 2:
         return await message.reply_text("Please give a text.\nEx:`/mlogo Sithija` ")
@@ -103,7 +102,6 @@ async def logomake(_, message: Message):
 
 
 @bot.on_message(filters.command("plogo") & ~filters.forwarded)
-@ForceSub
 async def logomake(_, message: Message):
     if len(message.command) != 2:
         return await message.reply_text("Please give a text.\nEx:`/plogo Sithija's Assistant` ")
